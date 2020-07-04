@@ -8,8 +8,7 @@ exports.callGoogleAuth =
       {
         scope:['email', 'profile']
       }
-    ),            
-    (req,res)=>{}
+    );
 
 
 // Api call back function
@@ -20,7 +19,4 @@ exports.callBackGoogle =
       {
         scope: ['email', 'profile']
       }
-    ),
-    (req,res)=>{
-      res.send("Congrats");
-    }
+    );

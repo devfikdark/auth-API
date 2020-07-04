@@ -5,11 +5,13 @@
 
 ### Development dependencies
 
-- "dotenv": "^8.2.0",
-- "express": "^4.17.1",
-- "mongoose": "^5.9.21",
-- "passport": "^0.4.1",
-- "passport-google-oauth20": "^2.0.0"
+- [dotenv](https://www.npmjs.com/package/dotenv) - use for access .env file data (process.env)
+- [express](https://www.npmjs.com/package/express) - use for nodejs web framwork
+- [mongoose](https://www.npmjs.com/package/mongoose) - use for DB related work
+- [nodemon](https://www.npmjs.com/package/nodemon) - use for automatically restarting the node application
+- [passport](https://www.npmjs.com/package/passport) - use for nodeJs authentication
+- [passport-google-oauth20](https://www.npmjs.com/package/passport-google-oauth20) - use for Google 0auth
+  
 
 ### Routes
 - Api call for google authentication

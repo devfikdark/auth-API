@@ -7,11 +7,17 @@ let {
 
 // Api call for google authentication
 router
-  .get('/' ,callGoogleAuth);
+  .get('/' ,callGoogleAuth,         
+    (req, res)=>{}
+  );
 
 // Api call back function
 router
-  .get('/callback', callBackGoogle);
+  .get('/callback', callBackGoogle,
+    (req, res)=>{
+      return res.send("Congrats");
+    }
+  );
 
 
 module.exports = router;
