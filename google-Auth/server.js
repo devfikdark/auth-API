@@ -1,5 +1,9 @@
-let app = require('./app');
+let dotEnv = require('dotenv');
+dotEnv.config({ path: './env/config.env' });
+
 require('./db/connection');
+
+let app = require('./app');
 
 let port = process.env.PORT || 3000;
 

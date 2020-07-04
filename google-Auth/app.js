@@ -1,11 +1,49 @@
 let express = require('express');
-let session = require('express-session')
-let passport = require('./config/passport')
-let dotEnv = require('dotenv');
-dotEnv.config({ path: './env/config.env' });
+let passport = require('./config/Configuration');
 
 let app = express();
 
-passport(app);
+/*
+// GET /auth/google
+//   Use passport.authenticate() as route middleware to authenticate the
+//   request.  The first step in Google authentication will involve
+//   redirecting the user to google.com.  After authorization, Google
+//   will redirect the user back to this application at /auth/google/callback
+app.get('/auth/google',
+  passport.authenticate('google', 
+  { 
+    scope: ['https://www.googleapis.com/auth/plus.login'] 
+  }));
+
+// GET /auth/google/callback
+//   Use passport.authenticate() as route middleware to authenticate the
+//   request.  If authentication fails, the user will be redirected back to the
+//   login page.  Otherwise, the primary route function function will be called,
+//   which, in this example, will redirect the user to the home page.
+app.get('/auth/google/callback', 
+  passport.authenticate('google', 
+    { failureRedirect: '/login' }
+  ),
+  function(req, res) {
+    res.redirect('/');
+  });
+*/
+
+app.use(passport.initialize());
+
+// Api call for google authentication
+app.get(
+  '/',
+  passport.authenticate('google', {scope:['email', 'profile']}),            
+  (req,res)=>{}
+);
+
+// Api call back function
+app.get('/auth/google/callback'
+  ,passport.authenticate('google', {scope: ['email', 'profile']}),
+  (req,res)=>{
+     return res.send("Congrats");
+  }
+);
 
 module.exports = app;
