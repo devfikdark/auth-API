@@ -1,4 +1,5 @@
 let app = require('./app');
+require('./db/connection');
 
 let port = process.env.PORT || 3000;
 
