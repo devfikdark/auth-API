@@ -30,7 +30,8 @@ passport.use(new GoogleStrategy(
   },
   (accessToken, refreshToken, profile, cb) => {
     cb(null, extractProfile(profile));
-}));
+  }
+));
 
 passport.serializeUser((user, cb) => {
   cb(null, user);
