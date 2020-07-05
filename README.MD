@@ -1,14 +1,17 @@
 # NodeJs Authentications
 
-
-## Google authentication
-
-### Development dependencies
+### Common dependencies
 
 - [dotenv](https://www.npmjs.com/package/dotenv) - use for access .env file data (process.env)
 - [express](https://www.npmjs.com/package/express) - use for nodejs web framwork
 - [mongoose](https://www.npmjs.com/package/mongoose) - use for DB related work
 - [nodemon](https://www.npmjs.com/package/nodemon) - use for automatically restarting the node application
+
+
+## Google authentication
+
+### Development dependencies
+
 - [passport](https://www.npmjs.com/package/passport) - use for nodeJs authentication
 - [passport-google-oauth20](https://www.npmjs.com/package/passport-google-oauth20) - use for Google 0auth
   
@@ -44,3 +47,15 @@
 ```
  
 
+## Facebook authentication
+
+### Development dependencies
+
+- [passport](https://www.npmjs.com/package/passport) - use for nodeJs authentication
+- [passport-facebook](https://www.npmjs.com/package/passport-facebook) - use for Facebook auth
+
+### Routes
+- Api call for facebook authentication
+  - http://localhost:3000/auth/facebook
+- Api call back function
+  - http://localhost:3000/auth/facebook/callback
