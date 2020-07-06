@@ -1,0 +1,20 @@
+{
+  "name": "github-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pro-js/node-Authentication.git"
+  },
+  "author": "Morol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pro-js/node-Authentication/issues"
+  },
+  "homepage": "https://github.com/pro-js/node-Authentication#readme"
+}
