@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pro-js/node-Authentication.git"
+    "url": "git+https://github.com/pro-js/auth-API.git"
   },
   "author": "Morol",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pro-js/node-Authentication/issues"
+    "url": "https://github.com/pro-js/auth-API/issues"
   },
-  "homepage": "https://github.com/pro-js/node-Authentication#readme"
+  "homepage": "https://github.com/pro-js/auth-API#readme"
 }

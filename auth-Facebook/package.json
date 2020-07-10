@@ -1,5 +1,5 @@
 {
-  "name": "google-auth",
+  "name": "facebook-auth",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,21 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pro-js/node-Authentication.git"
+    "url": "git+https://github.com/pro-js/auth-API.git"
   },
   "author": "Morol",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pro-js/node-Authentication/issues"
+    "url": "https://github.com/pro-js/auth-API/issues"
   },
-  "homepage": "https://github.com/pro-js/node-Authentication#readme",
+  "homepage": "https://github.com/pro-js/auth-API#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-session": "^1.17.1",
-    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.21",
     "passport": "^0.4.1",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-facebook": "^3.0.0"
   }
 }
