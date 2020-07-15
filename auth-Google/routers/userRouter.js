@@ -8,7 +8,9 @@ let {
 // Api call for google authentication
 router
   .get('/' ,callGoogleAuth,         
-    (req, res)=>{}
+    (req, res)=>{
+      
+    }
   );
 
 // Api call back function
