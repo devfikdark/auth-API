@@ -17,12 +17,21 @@
   
 
 ### Routes
+- Home Pgae
+  - https://pro-authapi.herokuapp.com
 - Api call for google authentication
-  - http://localhost:3000/auth/google
+  - https://pro-authapi.herokuapp.com/auth/google
 - Api call back function
-  - http://localhost:3000/auth/google/callback
+  - https://pro-authapi.herokuapp.com/profile
+  
+- **Home Page**  
+![social-auth](https://user-images.githubusercontent.com/31995155/87836241-3dcf8c00-c8b1-11ea-9311-43a9914ebca7.png)
 
-### Google send response :heart:
+- **Profile Page with Google Data**
+![google-auth](https://user-images.githubusercontent.com/31995155/87836242-3dcf8c00-c8b1-11ea-82f6-8ee3c88d3702.png)
+
+
+- **Google send response :heart:**
 ```js
 { 
   id: '107452959910700861566',
