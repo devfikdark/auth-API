@@ -11,6 +11,7 @@ module.exports = (app, passport) => {
     });
   });
 
+  /*****  Google  ****/
   // send to google to do the authentication
   // profile gets us their basic information including their name
   // email gets their emails
@@ -24,6 +25,27 @@ module.exports = (app, passport) => {
   app.get('/auth/google/callback', 
     passport.authenticate(
       'google', 
+      {
+        successRedirect: '/profile',
+        failureRedirect: '/'
+      }
+  ));
+
+
+  /*****  Facebook  ****/
+  // send to facebook to do the authentication
+  // profile gets us their basic information including their name
+  // email gets their emails
+  app.get('/auth/facebook', 
+    passport.authenticate(
+      'facebook', 
+      { scope: ['profile', 'email'] }
+    )
+  );
+
+  app.get('/auth/facebook/callback', 
+    passport.authenticate(
+      'facebook', 
       {
         successRedirect: '/profile',
         failureRedirect: '/'
