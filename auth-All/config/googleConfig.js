@@ -26,7 +26,8 @@ module.exports = (passport) => {
         user.name = profile._json.name;
         user.email = profile._json.email;
         user.picture = profile._json.picture;
-
+        user.socialName = "Google";
+        user.socialImg = "./img/google.jpg";
         return cb(null, user);
       });
     }

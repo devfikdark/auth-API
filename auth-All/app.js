@@ -10,6 +10,7 @@ require('./config/googleConfig')(passport);
 
 app.use(cookieParser()); // read cookies (needed for auth)
 app.set('view engine', 'ejs'); // set up ejs for templating
+app.use(express.static('public'));
 app.use(session({ secret: 'morol' })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
