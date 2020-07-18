@@ -1,5 +1,3 @@
-const passport = require('passport');
-
 let GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 module.exports = (passport) => {
