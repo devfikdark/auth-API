@@ -5,8 +5,10 @@ const flash    = require('connect-flash');
 const cookieParser = require('cookie-parser');
 const session      = require('express-session');
 
-// Google config
+// Social config
 require('./config/googleConfig')(passport);
+require('./config/facebookConfig')(passport);
+require('./config/githubConfig')(passport);
 
 app.use(cookieParser()); // read cookies (needed for auth)
 app.set('view engine', 'ejs'); // set up ejs for templating

@@ -20,11 +20,27 @@
                 <img class="logoDesign" src=<%= user.socialImg %> alt=""> 
               </div>
             </span>
-
-            <div>
-              <strong>Email</strong>: <%= user.email %><br>
-              <strong>Name</strong>: <%= user.name %><br><br>
-              <img class="profileImg" src=<%= user.picture %> alt="">
+            <br>
+            <div class="row">
+              <div class="col s12 m6">
+                    <img class="responsive-img" src=<%= user.picture %> alt="">
+              </div>
+              <div class="col s12 m6">
+                <div class="card center-align">           
+                  <div class="card-content"> 
+                    <table class="highlight">
+                      <tr>
+                        <td><h6>Email:</h6> </td>
+                        <td><%= user.email %></td>
+                      </tr>
+                      <tr>
+                        <td><h6>Name:</h6> </td>
+                        <td><%= user.name %></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

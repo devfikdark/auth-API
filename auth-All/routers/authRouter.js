@@ -11,20 +11,20 @@ module.exports = (app, passport) => {
     });
   });
 
-  /*****  Google  ****/
-  // send to google to do the authentication
+  /*****  github  ****/
+  // send to github to do the authentication
   // profile gets us their basic information including their name
   // email gets their emails
-  app.get('/auth/google', 
+  app.get('/auth/github', 
     passport.authenticate(
-      'google', 
+      'github', 
       { scope: ['profile', 'email'] }
     )
   );
 
-  app.get('/auth/google/callback', 
+  app.get('/auth/github/callback', 
     passport.authenticate(
-      'google', 
+      'github', 
       {
         successRedirect: '/profile',
         failureRedirect: '/'
@@ -52,6 +52,27 @@ module.exports = (app, passport) => {
       }
   ));
 
+  /*****  Github  ****/
+  // send to github to do the authentication
+  // profile gets us their basic information including their name
+  // email gets their emails
+  app.get('/auth/github', 
+    passport.authenticate(
+      'github', 
+      { scope: ['profile', 'email'] }
+    )
+  );
+
+  app.get('/auth/github/callback', 
+    passport.authenticate(
+      'github', 
+      {
+        successRedirect: '/profile',
+        failureRedirect: '/'
+      }
+  ));
+
+  // Logout common
   app.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/');
