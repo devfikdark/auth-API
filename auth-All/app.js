@@ -9,6 +9,7 @@ const session      = require('express-session');
 require('./config/googleConfig')(passport);
 require('./config/facebookConfig')(passport);
 require('./config/githubConfig')(passport);
+require('./config/twitterConfig')(passport);
 require('./config/linkedinConfig')(passport);
 
 /*** Middleware ***/

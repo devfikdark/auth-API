@@ -11,7 +11,6 @@ async function extractProfile(profile) {
     profilePhoto: profile._json.picture,
     createAt: Date.now()
   };
-
   let oldUser = await User.findOne({ googleId: userData.googleId });
 
   if (oldUser) return null;

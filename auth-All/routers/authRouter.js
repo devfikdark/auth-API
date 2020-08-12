@@ -80,6 +80,21 @@ module.exports = (app, passport) => {
       }
   ));
 
+  /*****  Twitter  ****/
+  // send to twitter to do the authentication
+  // profile gets us their basic information including their name
+  // email gets their emails
+  app.get('/auth/twitter', 
+    passport.authenticate('twitter'));
+
+  app.get('/auth/twitter/callback', 
+    passport.authenticate(
+      'twitter', 
+      {
+        successRedirect: '/profile',
+        failureRedirect: '/'
+      }
+  ));
 
   // Logout common
   app.get('/logout', (req, res) => {
