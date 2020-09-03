@@ -1,4 +1,4 @@
-let TwitterStrategy = require('passport-twitter').Strategy;
+const TwitterStrategy = require('passport-twitter').Strategy;
 
 module.exports = (passport) => {
   // used to serialize the user for the session

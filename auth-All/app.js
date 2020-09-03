@@ -1,13 +1,14 @@
 const express = require('express');
 const app = express();
 const passport = require('passport');
-const flash    = require('connect-flash');
+const flash = require('connect-flash');
 const cookieParser = require('cookie-parser');
-const session      = require('express-session');
+const session = require('express-session');
 
 /*** Social config ***/
 require('./config/googleConfig')(passport);
 require('./config/facebookConfig')(passport);
+require('./config/instagramConfig')(passport);
 require('./config/githubConfig')(passport);
 require('./config/twitterConfig')(passport);
 require('./config/linkedinConfig')(passport);

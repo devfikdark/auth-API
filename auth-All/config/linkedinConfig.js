@@ -1,4 +1,4 @@
-let LinkedinStrategy = require('passport-linkedin-oauth2').Strategy;
+const LinkedinStrategy = require('passport-linkedin-oauth2').Strategy;
 
 module.exports = (passport) => {
   // used to serialize the user for the session

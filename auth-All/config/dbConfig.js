@@ -1,4 +1,4 @@
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 // cloud connection-Str
 let cloudDB = process.env.DATABASE.replace(

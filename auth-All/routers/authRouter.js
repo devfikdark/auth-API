@@ -96,6 +96,24 @@ module.exports = (app, passport) => {
       }
   ));
 
+  /*****  Instagram  ****/
+  // send to instagram to do the authentication
+  // profile gets us their basic information including their name
+  // email gets their emails
+  app.get('/auth/instagram', 
+    passport.authenticate('instagram', {
+      scope: ['user_profile', 'user_media']
+    }));
+
+  app.get('/auth/instagram/callback', 
+    passport.authenticate(
+      'instagram', 
+      {
+        successRedirect: '/profile',
+        failureRedirect: '/'
+      }
+  ));
+
   // Logout common
   app.get('/logout', (req, res) => {
     req.logout();

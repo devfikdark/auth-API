@@ -1,4 +1,4 @@
-let GithubStrategy = require('passport-github2').Strategy;
+const GithubStrategy = require('passport-github2').Strategy;
 
 module.exports = (passport) => {
   // used to serialize the user for the session

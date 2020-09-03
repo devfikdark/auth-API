@@ -1,4 +1,4 @@
-let GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 module.exports = (passport) => {
   // used to serialize the user for the session
